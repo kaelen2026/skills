@@ -1,8 +1,46 @@
 # kaelen/skills · 独立开发者的资深工程师技能包
 
+[![Release](https://img.shields.io/github/v/release/kaelen2026/skills?label=release&color=d97757)](https://github.com/kaelen2026/skills/releases)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
+[![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)](https://github.com/kaelen2026/skills)
+[![Skills](https://img.shields.io/badge/skills-20-blue)](#全部技能20-个)
+
 一套**自包含**的 Claude Code 技能包，面向**独立开发者**，把资深工程师动手前后的判断力沉淀成会在对的时机自动触发的 skill。
 
 资深工程师和新手的差距，往往不在能不能把代码写出来，而在动手前后的判断力：知道什么不该做、改动会波及哪里、哪个发现真会出事、什么时候该停。独立开发者一个人身兼数职，最缺的恰恰是团队才有的那几样东西。这套包就是来补这个的。
+
+## 安装
+
+```bash
+/plugin marketplace add kaelen2026/skills
+/plugin install kaelen-skills@kaelen
+```
+
+## 演示
+
+装好后，按 `when_to_use` 触发词自然唤起，或显式 `/<skill>` 调用。一段典型的单人开发流程：
+
+```text
+你 ▸ 我想给博客加个评论功能，先帮我盘一盘该不该自己做
+    └─ office-hours 接管：六个逼问 → 结论是先用第三方，自建不值当
+
+你 ▸ /think 那就接入 giscus，给我一个方案
+    └─ think：一次一问拷问边界，产出决策完整的计划
+
+你 ▸ /plan-review 写代码前过一遍
+    └─ plan-review：战略/架构/设计三视角打分，指出"评论加载阻塞首屏"，改计划
+
+你 ▸ （写完）合并前看看
+    └─ check：对抗式自审 diff，挡住一个未转义的用户输入
+
+你 ▸ 线上偶发 500，以前是好的
+    └─ hunt：先建可复现回路 → 定位根因 → 修复 + 回归测试
+
+你 ▸ 这周发了什么
+    └─ retro：从 git 历史复盘节奏与测试健康趋势
+```
+
+各 skill 的 `Not for` 边界互相指向，所以"排查报错"走 `hunt`、"评审代码"走 `check`，不会抢触发。
 
 ## 为谁，补什么
 
@@ -52,21 +90,11 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
 **元**
 - [`health`](./health/SKILL.md) · 配置体检 —— 审计 Claude Code / Codex / 项目指令的健康度与漂移
 
-## 怎么用
+## 其它安装方式
 
-本仓库即一个 Claude Code 插件（含 `.claude-plugin/` 清单）。**一键安装**：
+本仓库即一个 Claude Code 插件（含 `.claude-plugin/` 清单），安装见顶部。也支持本地路径添加 marketplace：`/plugin marketplace add <本地仓库路径>`。
 
-```bash
-# 1. 把本仓库添加为 marketplace（本地路径或 GitHub 仓库均可）
-/plugin marketplace add <本仓库路径或 owner/repo>
-
-# 2. 安装整包（20 个 skill 一次装好）
-/plugin install kaelen-skills@kaelen
-```
-
-装完按 `when_to_use` 里的触发词自然唤起，或显式 `/think`、`/hunt` 等调用。各 skill 的 `Not for` 边界互相指向，避免抢触发。
-
-不想用插件机制，也可以把单个 skill 软链到个人目录：`ln -s "$(pwd)/skills/hunt" ~/.claude/skills/hunt`。
+不想用插件机制，可把单个 skill 软链到个人目录：`ln -s "$(pwd)/skills/hunt" ~/.claude/skills/hunt`。
 
 ## 仓库结构
 
