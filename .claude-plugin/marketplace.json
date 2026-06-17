@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "kaelen",
+  "owner": {
+    "name": "kaelen",
+    "email": "kaelen.hou@gmail.com"
+  },
+  "metadata": {
+    "description": "独立开发者的资深工程师技能集",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "kaelen-skills",
+      "source": "./",
+      "description": "20 个零基建纯 prompt 技能，把资深工程师动手前后的判断力沉淀成会自动触发的 skill，面向独立开发者。",
+      "category": "productivity",
+      "tags": ["indie-dev", "code-review", "debugging", "planning", "ship", "chinese"]
+    }
+  ]
+}
