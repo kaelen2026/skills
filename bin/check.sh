@@ -61,6 +61,21 @@ else
   echo "[warn] 未找到 health/scripts/check-doc-refs.sh，跳过断链检查"
 fi
 
+# 4. 版本一致：plugin.json 与 marketplace.json 必须同版本（git tag 是发版时的事，不在此校验）
+pj=.claude-plugin/plugin.json
+mj=.claude-plugin/marketplace.json
+if [ -f "$pj" ] && [ -f "$mj" ]; then
+  vp=$(python3 -c "import json;print(json.load(open('$pj')).get('version',''))" 2>/dev/null)
+  vm=$(python3 -c "import json;print(json.load(open('$mj')).get('metadata',{}).get('version',''))" 2>/dev/null)
+  if [ -n "$vp" ] && [ "$vp" = "$vm" ]; then
+    echo "[ok] 版本一致：plugin.json 与 marketplace.json 同为 $vp"
+  else
+    echo "[FAIL] 版本不一致：plugin.json=$vp marketplace.json=$vm（发版前两者需相等）"; fail=1
+  fi
+else
+  echo "[warn] 缺 .claude-plugin manifest，跳过版本一致性检查"
+fi
+
 echo
 if [ $fail -eq 0 ]; then
   echo "全部通过。"
