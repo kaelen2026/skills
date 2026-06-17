@@ -9,6 +9,6 @@ jobs:
   check:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: 运行不变量门禁
         run: bash bin/check.sh
