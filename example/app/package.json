@@ -1,0 +1,19 @@
+{
+  "name": "urlshort",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "确定性 URL 短链 CLI —— kaelen/skills 链路 dogfood 示例",
+  "bin": {
+    "urlshort": "src/cli.ts"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.ts",
+    "shorten": "node src/cli.ts shorten",
+    "expand": "node src/cli.ts expand",
+    "list": "node src/cli.ts list"
+  },
+  "engines": {
+    "node": ">=23.6"
+  }
+}
