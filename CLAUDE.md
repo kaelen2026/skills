@@ -2,6 +2,10 @@
 
 这是一套面向独立开发者的零基建、纯 prompt 技能包。新增或修改 skill 时严格遵守以下不变量（背景见 [README](./README.md) 的"房屋风格"）。改完务必跑 `bin/check.sh` 自检，全过再提交。
 
+## 工作流
+
+动任何代码前先读 [.claude/rules/workflow.md](.claude/rules/workflow.md)。要点：开工前确认 `main` 干净 → 先切分支再 Write/Edit（禁止在 `main` 上直接改）→ 合入 `main` 只走 PR，不本地 merge。
+
 ## 每个 skill 的结构
 
 - 每个 skill 是 `skills/<name>/` 下的一个 kebab-case 目录，内含 `SKILL.md`；深度内容（长清单、评分维度、模板）放 `references/*.md`，按需加载。插件机制自动发现 `skills/` 下的所有 skill。
