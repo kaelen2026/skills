@@ -5,6 +5,7 @@
 ## 每个 skill 的结构
 
 - 每个 skill 是 `skills/<name>/` 下的一个 kebab-case 目录，内含 `SKILL.md`；深度内容（长清单、评分维度、模板）放 `references/*.md`，按需加载。插件机制自动发现 `skills/` 下的所有 skill。
+- `health` / `check` / `read` 带的 `scripts/`、`agents/` 是从上游近原样搬来的工具代码，**别为风格手改**，规则见 [VENDORED.md](./VENDORED.md)。
 - frontmatter 四件套：
   - `name`：kebab-case，**必须等于目录名**。
   - `description`：第三人称，先说做什么 + 何时用，结尾用 `Not for ...` 指向最接近的邻居 skill，避免抢触发。

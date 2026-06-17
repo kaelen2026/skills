@@ -96,6 +96,15 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
 
 不想用插件机制，可把单个 skill 软链到个人目录：`ln -s "$(pwd)/skills/hunt" ~/.claude/skills/hunt`。
 
+## 与 waza / gstack 共存
+
+本包方法论改写自 waza 与 gstack（见致谢）。若你同时装了它们，注意触发词冲突，只保留一套：
+
+- **同名直接冲突**：`think` `hunt` `check` `design` `write` `read` `learn` `health`（waza）、`office-hours` `retro`（gstack）。二选一，本包的安装即替换它们。
+- **异名但语义重叠**：本包 `plan-review` 对应 gstack 的 `plan-ceo-review` / `plan-eng-review` 等，`document` 对应 `document-release` / `document-generate`。名字不同不会自动冲突，但会争"评审方案/同步文档"这类请求，建议只启用一套或收窄其一的 `when_to_use`。
+
+gstack 绑定运行时的技能（`browse` `qa` `canary` `ios-*` `pair-agent` 等）本包未覆盖，不冲突，继续用 gstack 本体即可。
+
 ## 仓库结构
 
 ```
