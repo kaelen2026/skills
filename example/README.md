@@ -51,7 +51,7 @@ node src/cli.ts expand <code>                    # 还原
 
 - **prototype / improve-arch / zoom-out**：这个工具一个文件就装下，没有"先抛弃式验证"或"降耦合""画地图"的需要。链路够大才用得上。
 - **design / write / learn / read / handoff / health**：分别是 UI、文案、研究、读链接、会话交接、配置体检，与一个无界面的小 CLI 不沾边。
-- **qa**：这个样例创建时还没有独立 QA skill，运行时验证散在 `tdd` / `hunt` / `check` 的工件里；如果重跑链路，可在实现后单独补一份 CLI QA 验收。
+- **qa**：这个样例创建时还没有独立 QA skill，运行时验证散在 `tdd` / `hunt` / `check` 的工件里。后来 qa skill 上线后，单独补了一份 CLI 运行时验收，见 [chain/10-qa.md](chain/10-qa.md) —— 它证明的是"这条命令现在能交到用户手里"，和 `tdd` 的"逻辑对"是两层证据。
 - **document** 只产出了工具的 README，没动仓库主文档，因为这是隔离的 example。
 
-也就是说：21 个 skill 里，一个**纯后端小工具**在这条历史链路里自然触发的是这 11 个。这正是 `when_to_use` + `Not for` 边界在起作用 —— 不该触发的不硬凑。
+也就是说：21 个 skill 里，一个**纯后端小工具**在这条历史链路里自然触发的是 11 个，外加事后补做的 qa 验收。这正是 `when_to_use` + `Not for` 边界在起作用 —— 不该触发的不硬凑。
