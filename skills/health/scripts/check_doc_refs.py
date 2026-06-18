@@ -61,7 +61,7 @@ def collect_scan_files(root: Path) -> list[Path]:
     scan_files: list[Path] = []
     for path in sorted(root.rglob("*.md")):
         parts = path.relative_to(root).parts
-        if ".git" in parts:
+        if ".git" in parts or "node_modules" in parts:
             continue
         if "agents" in parts:
             continue
