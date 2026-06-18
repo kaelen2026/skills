@@ -77,7 +77,7 @@ dispatch_intent: "A raw idea with no plan yet: decide whether it should exist at
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 对一个没验证的想法说"挺酷的，开干吧" | 诊断不鼓励，对每个答案表态 |
 | 把等待名单/注册数当成需求证据 | 只认行为和付费意愿 |
 | 接受了"医疗企业"这种类别级用户 | 逼到一个具体的人名/职位 |
@@ -89,11 +89,13 @@ dispatch_intent: "A raw idea with no plan yet: decide whether it should exist at
 ## Output
 
 **判断（第一行，无前言）：Kill / Narrow / Build 之一**
+
 - **Kill**：为什么不该做（需求假、现状证明没人痛、对手是现状且现状够用）。
 - **Narrow**：该做，但只做这个最窄楔子——一句话说清这周能上、有人肯付钱的最小版本。
 - **Build**：需求和用户都站得住，给出最窄切入点作为起点。
 
 **简短设计文档（保存为一份 md，供后续 think 读取）：**
+
 - **问题陈述**：解决谁的什么问题
 - **目标用户**：具体到名字/角色
 - **需求证据**：行为 / 付费 / 慌乱级别的证据

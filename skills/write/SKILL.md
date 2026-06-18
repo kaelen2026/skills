@@ -70,7 +70,7 @@ dispatch_intent: "Polish or rewrite prose, kill AI tone, draft release notes and
 ## Gotchas
 
 | 真实翻车 | 规则 |
-|---|---|
+| --- | --- |
 | 没被要求就重排了标题 | 不重构，原地改，除非明确要求改结构 |
 | 重写后又附了一段"改了哪些" | 输出只是改后文字，无 changelog 无评论 |
 | 给博客草稿用了正式书面腔 | 匹配读者语域，博客是口语不是学术 |

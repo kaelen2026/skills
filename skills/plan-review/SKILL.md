@@ -73,7 +73,7 @@ dispatch_intent: "An existing plan to harden before coding: challenge premise an
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 读一遍计划说"挺好的"就放行 | 不是来盖章的，每条意见落到计划改动上 |
 | 列了一堆问题却没动计划本身 | 产出是改后的计划，不是评论 |
 | 给维度打了分却说不出到 10 缺什么 | 每个分数配一句具体缺口 |
@@ -96,6 +96,7 @@ dispatch_intent: "An existing plan to harden before coding: challenge premise an
 ## Output
 
 **评审摘要：**
+
 - **范围模式**: 选了哪个 + 一句理由
 - **各视角分数**: CEO / Eng / Design / DevEx 各打了几分（未触发的标"N/A"）
 - **改了什么**: 计划里被补齐 / 重写的关键点（3-7 条）

@@ -26,5 +26,5 @@
 
 ## 提交前
 
-1. 跑 `bin/check.sh`，全过。克隆后跑一次 `bash bin/setup-hooks.sh` 即可把它接成 git pre-commit hook（`core.hooksPath -> .githooks`），之后每次提交自动校验，不过就拦下。确需跳过单次：`git commit --no-verify`。
+1. 跑 `npm test`（= `bin/check.sh` 不变量 + `markdownlint-cli2` markdown 门禁），全过。克隆后跑一次 `bash bin/setup-hooks.sh`（即 `npm install`，触发 husky）即可接成 git pre-commit hook，之后每次提交自动跑 lint-staged 修复暂存 markdown 再校验，不过就拦下。确需跳过单次：`git commit --no-verify`。markdown 规则见 `.markdownlint-cli2.jsonc`。
 2. 新增 skill 记得在 README 的技能清单、困境映射表、致谢段里登记。

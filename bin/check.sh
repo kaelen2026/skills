@@ -13,6 +13,7 @@ em='—'; en='–'; s1='⸺'; s2='⸻'
 bad=[]
 for root,_,files in os.walk('.'):
     if os.sep+'.git' in root: continue
+    if 'node_modules' in root.split(os.sep): continue
     for fn in files:
         if not fn.endswith('.md'): continue
         p=os.path.join(root,fn)
@@ -51,7 +52,7 @@ done
 
 # 3. 文档引用无断链（复用 health 采集脚本）
 if [ -f skills/health/scripts/check-doc-refs.sh ]; then
-  out=$(bash skills/health/scripts/check-doc-refs.sh . 2>&1)
+  out=$(bash skills/health/scripts/check-doc-refs.sh . 2>&1 | grep -v 'node_modules')
   if echo "$out" | grep -qiE 'missing|broken|not found|fail'; then
     echo "[FAIL] 文档引用断链："; echo "$out" | sed 's/^/    /'; fail=1
   else

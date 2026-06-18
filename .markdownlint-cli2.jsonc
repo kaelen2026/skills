@@ -1,0 +1,29 @@
+{
+  // 仓库 markdown 门禁。重点保结构类规则（列表/标题留白），
+  // 关掉与中文长文、密集文档天然冲突的风格规则。
+  "config": {
+    "default": true,
+    "MD013": false, // line-length：中文长句不限行宽
+    "MD033": false, // inline HTML：文档里会用到
+    "MD041": false, // first-line-heading：部分片段不以标题开头
+    "MD024": false, // duplicate-heading：不同小节可重名（如多个“评估”）
+    "MD036": false, // emphasis-as-heading：正文里大量用加粗做小标签，是有意为之
+    "MD040": false, // fenced-code-language：示例/输出块刻意不标语言
+    "MD060": {
+      // table-column-style：表格统一用 compact（竖线两侧各留一个空格，不做列对齐）
+      "style": "compact"
+    }
+  },
+  "globs": ["**/*.md"],
+  "ignores": [
+    "node_modules",
+    "**/node_modules",
+    "example/app",
+    // vendored（tw93/waza）：见 VENDORED.md，别为风格改动
+    "skills/health/agents",
+    "skills/health/scripts",
+    "skills/check/agents",
+    "skills/check/scripts",
+    "skills/read/scripts"
+  ]
+}

@@ -90,7 +90,7 @@ Keep this context brief. It should guide the review, not replace the review meth
 Fill this before claiming a change is release-ready. Use "n/a" only when the project clearly has no such surface.
 
 | Surface | Evidence |
-|---|---|
+| --- | --- |
 | Review base | Base branch, latest tag, and commit range reviewed |
 | Worktree state | Dirty, staged, and untracked files accounted for |
 | Remote state | `origin/main` or release branch sync checked |

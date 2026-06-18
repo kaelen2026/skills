@@ -44,7 +44,7 @@ dispatch_intent: "Compress this conversation into a handoff doc the next session
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 把整段对话原样转录，下一段还得重读 | 压缩状态和方向，不转录过程 |
 | 把方案/PRD/diff 内容抄进文档，又长又漂移 | 引用路径/链接，不复制 |
 | 顺手把日志里的 API key 写进了交接文档 | 删敏感信息，只写"需要某凭据" |

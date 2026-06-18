@@ -7,7 +7,7 @@
 以下组合会产生静默失败或不连贯输出。永远不要混用：
 
 | 不要混用 | 原因 |
-|---|---|
+| --- | --- |
 | 同一元素上 Tailwind + CSS Modules | 优先级冲突，级联不可预测 |
 | 同一元素上 Framer Motion + CSS transition | 同属性双重动画导致 jank |
 | styled-components/emotion + Tailwind | 两套 class 系统抢同一个 DOM 节点 |
@@ -40,6 +40,7 @@
 看着像真但不是真的占位文案，用户一读就破功。交付前应用这些规则。
 
 **示例数据：**
+
 - 不用泛用人名：不要 John Doe、Jane Smith、Alex Johnson，或任何读起来像填充的"名+姓"。用有文化多样性和具体感的名字（Priya Mehta、Lars Eriksson、Nia Okafor）。
 - 不用泛用公司名：不要 Acme Corp、Nexus、SmartFlow、TechCorp、Initech。挑带领域感的（Meridian Logistics、Hokkaido Ceramics、Vantage Bioworks）。
 - 不用 Lorem Ipsum。写匹配版面阅读层级的简短真文案。
@@ -47,6 +48,7 @@
 - 多个头像实例不能共用同一张图；多张博客/活动卡片不能共用同一日期。
 
 **UI 文案：**
+
 - 所有标题用 sentence case。Title Case On Every Heading 是正文里最常见的 AI 破绽。
 - 成功态去掉感叹号（"Saved!"→"Saved"，"Done!"→"Done"）。`!` 留给真正的紧急。
 - 错误消息绝不以 "Oops!" 开头，读起来居高临下。
@@ -161,7 +163,7 @@
 **目录里的品牌**（用户报参考时识别）：
 
 | 类目 | 品牌 |
-|---|---|
+| --- | --- |
 | AI & LLM | Claude, Cohere, ElevenLabs, Mistral, Ollama, Replicate, RunwayML, Together AI, xAI |
 | Dev Tools & IDEs | Cursor, Expo, Lovable, Raycast, Superhuman, Vercel, Warp |
 | Backend/DB/DevOps | ClickHouse, Composio, HashiCorp, MongoDB, PostHog, Sanity, Sentry, Supabase |

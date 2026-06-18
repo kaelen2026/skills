@@ -17,6 +17,7 @@ dispatch_intent: "Fetch a URL or PDF, summarize it or convert it to Markdown"
 - Output: 浓缩摘要 / 干净 Markdown / 保存路径 / 引文 / 提取的细节，按请求而定。
 
 判定输出形态：
+
 - 纯"读一下""看这个链接" → 给浓缩的、有据的摘要，不要倒全量 Markdown。
 - "转换""转 markdown""原文""全文""引用""cite""保存""下载"，以及 learn 调用 → 给或存干净 Markdown。
 - 同一条消息还要求对比/翻译/提取/分析 → 先取回再在同一回合答那个请求。
@@ -30,7 +31,7 @@ dispatch_intent: "Fetch a URL or PDF, summarize it or convert it to Markdown"
 ## Routing
 
 | 输入 | 方法 |
-|---|---|
+| --- | --- |
 | `feishu.cn`、`larksuite.com` | 飞书 API 脚本 |
 | `mp.weixin.qq.com` | 先 proxy 级联，仅在代理失败时才用内置微信脚本 |
 | `.pdf` URL 或本地 PDF 路径 | PDF 抽取 |
@@ -43,6 +44,7 @@ dispatch_intent: "Fetch a URL or PDF, summarize it or convert it to Markdown"
 ## Fetch Tiers
 
 `scripts/fetch.sh` 隐私优先，级联取决于是否 opt-in 代理：
+
 - 默认 `fetch.sh URL`：仅本地抽取器，URL 不出本机。最佳质量需 `pip install --user readability-lxml html2text`；没装则退回 stdlib HTML 剥离（能用但更脏）。
 - opt-in `fetch.sh --use-proxy URL`：本地 → `defuddle.md` → `r.jina.ai`。仅对 JS 重页（X/Twitter）、付费墙、本地抽取器够不着的公开页用。
 每层都打一行 stderr：`[fetch] tier=<name> status=<ok|fail> reason="..."`。取回失败先读 stderr，它点名了具体层和原因。
@@ -94,7 +96,7 @@ Content
 ## Gotchas
 
 | 真实翻车 | 规则 |
-|---|---|
+| --- | --- |
 | 取回付费文章却把登录页当 Markdown 返回 | 查前 10 行付费墙信号，命中即停并告警，别存登录页 |
 | 用户说"读一下"却想要干货 | 先取回再给默认浓缩摘要，没要求别保存 |
 | 用户明确要 Markdown / 全文 | 返回完整 Markdown，不要给默认摘要 |

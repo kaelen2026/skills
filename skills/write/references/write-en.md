@@ -30,7 +30,7 @@ Examples, not exhaustive -- any word used to signal importance rather than to sa
 **AI vocabulary: replace with plain language:**
 
 | Avoid | Use instead |
-|-------|-------------|
+| --- | --- |
 | delve (into) | examine, look at, explore |
 | leverage (as verb) | use |
 | utilize | use |

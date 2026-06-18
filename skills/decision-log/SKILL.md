@@ -44,7 +44,7 @@ dispatch_intent: "Capture a made decision lightly: the choice, what was rejected
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 只记了"选了 X"，没记否掉了什么 | 必记被否备选及原因，否则代码已经说明了 X |
 | 记录没有重审触发条件，成了死档 | 每条带一句"何时回来重审" |
 | 套了企业级十段 ADR 模板，写一次就放弃 | 保持几行字，轻到愿意重复 |

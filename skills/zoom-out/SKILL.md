@@ -35,7 +35,7 @@ dispatch_intent: "Unfamiliar code area, need a higher-level map of modules and c
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 逐行解读了实现，没画出它在哪 | 上升一层，标边界和调用方，不钻细节 |
 | 用 "service"/"util" 糊了一遍 | 取项目领域词汇说话，没有就明说用描述性命名 |
 | 凭印象列调用方，漏了主入口 | `grep -rn` 查实所有调用点 |

@@ -44,7 +44,7 @@ dispatch_intent: "A sprawling set of wants to bound: decide what NOT to do this 
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 每个想法都收进 In，范围只增不减 | 默认在线外，进 In 要被论证 |
 | 给只有一个用例的需求做了通用化 | 砍镀金，需要第二个用例再说 |
 | 砍成了半成品，没法演示 | MVP 线必须仍可演示一个完整行为 |

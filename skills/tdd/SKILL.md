@@ -46,7 +46,7 @@ dispatch_intent: "New feature or logic built test-first, behavior pinned through
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 一口气写完五个测试再写实现 | 垂直切片：一个测试一段实现，逐颗推进 |
 | 重命名内部函数，一片测试变红 | 那些测的是实现不是行为，重写成只碰公开接口 |
 | 没看到红就写了实现 | 先确认测试会红（且红在缺失行为上），再写代码 |

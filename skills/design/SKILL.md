@@ -91,7 +91,7 @@ dispatch_intent: "UI, component, page, visual interface, frontend, screenshot ae
 ## Gotchas
 
 | 真实会犯的错 | 规则 |
-|---|---|
+| --- | --- |
 | 用 Inter 当 display 字体 | 它什么都没传达，挑个有个性的 |
 | 三张卡片同样阴影同样 padding，一个模板 | 换内容不需要改布局，就是模板，重做 |
 | 没开浏览器就说"看着对" | 脑子里对的代码在浏览器里可能是坏的，打开它 |
