@@ -63,32 +63,32 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
 ## 全部技能（20 个）
 
 **工程闭环**
-- [`think`](./think/SKILL.md) · 方案推演 —— 动手前一次一问地拷问、把方案与边界想清楚，产出决策完整的计划
-- [`plan-review`](./plan-review/SKILL.md) · 计划评审 —— 写代码前对计划做对抗式多视角评审（战略/架构/设计/体验），打分并改到位
-- [`hunt`](./hunt/SKILL.md) · 根因调试 —— 先建可信反馈回路，定位根因再修，拒绝"试一下看看"
-- [`check`](./check/SKILL.md) · 发布前评审 —— 对自己的 diff / PR / release 做对抗式自审与安全门禁
-- [`tdd`](./tdd/SKILL.md) · 红绿重构 —— 给没人 review 的代码织一张随时能安全重构的网
-- [`prototype`](./prototype/SKILL.md) · 一次性原型 —— 用完即弃的原型验证设计，答案进永久位置、代码进垃圾桶
-- [`improve-arch`](./improve-arch/SKILL.md) · 架构重构 —— 用领域语言找深化机会、降低耦合，扮演缺席的架构同伴
-- [`zoom-out`](./zoom-out/SKILL.md) · 画地图 —— 上升一层抽象，给陌生（或自己半年前写的）代码画模块与调用方地图
+- [`think`](./skills/think/SKILL.md) · 方案推演 —— 动手前一次一问地拷问、把方案与边界想清楚，产出决策完整的计划
+- [`plan-review`](./skills/plan-review/SKILL.md) · 计划评审 —— 写代码前对计划做对抗式多视角评审（战略/架构/设计/体验），打分并改到位
+- [`hunt`](./skills/hunt/SKILL.md) · 根因调试 —— 先建可信反馈回路，定位根因再修，拒绝"试一下看看"
+- [`check`](./skills/check/SKILL.md) · 发布前评审 —— 对自己的 diff / PR / release 做对抗式自审与安全门禁
+- [`tdd`](./skills/tdd/SKILL.md) · 红绿重构 —— 给没人 review 的代码织一张随时能安全重构的网
+- [`prototype`](./skills/prototype/SKILL.md) · 一次性原型 —— 用完即弃的原型验证设计，答案进永久位置、代码进垃圾桶
+- [`improve-arch`](./skills/improve-arch/SKILL.md) · 架构重构 —— 用领域语言找深化机会、降低耦合，扮演缺席的架构同伴
+- [`zoom-out`](./skills/zoom-out/SKILL.md) · 画地图 —— 上升一层抽象，给陌生（或自己半年前写的）代码画模块与调用方地图
 
 **产品与节奏**
-- [`office-hours`](./office-hours/SKILL.md) · 该不该做 —— 六个逼问验证一个想法值不值得做、做给谁、最窄切入点
-- [`scope-guard`](./scope-guard/SKILL.md) · 范围控制 —— 决定这次**不做**什么，砍掉镀金，切出 MVP 边界
-- [`ship-small`](./ship-small/SKILL.md) · 小步发布 —— 把一坨改动拆成各自能验、能上、能回滚的垂直切片
-- [`decision-log`](./decision-log/SKILL.md) · 决策留痕 —— 超轻量 ADR，把"为什么这么选"留给半年后的自己
-- [`handoff`](./handoff/SKILL.md) · 会话交接 —— 压缩上下文，交给下一段会话或明天的你继续
-- [`retro`](./retro/SKILL.md) · 复盘 —— 从 git 历史回看这段发了什么、节奏与测试健康趋势
+- [`office-hours`](./skills/office-hours/SKILL.md) · 该不该做 —— 六个逼问验证一个想法值不值得做、做给谁、最窄切入点
+- [`scope-guard`](./skills/scope-guard/SKILL.md) · 范围控制 —— 决定这次**不做**什么，砍掉镀金，切出 MVP 边界
+- [`ship-small`](./skills/ship-small/SKILL.md) · 小步发布 —— 把一坨改动拆成各自能验、能上、能回滚的垂直切片
+- [`decision-log`](./skills/decision-log/SKILL.md) · 决策留痕 —— 超轻量 ADR，把"为什么这么选"留给半年后的自己
+- [`handoff`](./skills/handoff/SKILL.md) · 会话交接 —— 压缩上下文，交给下一段会话或明天的你继续
+- [`retro`](./skills/retro/SKILL.md) · 复盘 —— 从 git 历史回看这段发了什么、节奏与测试健康趋势
 
 **内容与研究**
-- [`design`](./design/SKILL.md) · UI 设计 —— 有观点的界面与截图驱动的视觉打磨，替你补上不在场的设计师
-- [`write`](./write/SKILL.md) · 文字润色 —— 中英文 prose 去 AI 味（README、文档、发布说明、对外文案）
-- [`read`](./read/SKILL.md) · 读取链接 —— URL / PDF 取摘要或转 markdown
-- [`learn`](./learn/SKILL.md) · 深入研究 —— 多阶段研究工作流，把一批材料消化成一篇
-- [`document`](./document/SKILL.md) · 文档同步 —— 按 diff 同步现有文档、按 Diataxis 补缺失文档，让文档跟上已发代码
+- [`design`](./skills/design/SKILL.md) · UI 设计 —— 有观点的界面与截图驱动的视觉打磨，替你补上不在场的设计师
+- [`write`](./skills/write/SKILL.md) · 文字润色 —— 中英文 prose 去 AI 味（README、文档、发布说明、对外文案）
+- [`read`](./skills/read/SKILL.md) · 读取链接 —— URL / PDF 取摘要或转 markdown
+- [`learn`](./skills/learn/SKILL.md) · 深入研究 —— 多阶段研究工作流，把一批材料消化成一篇
+- [`document`](./skills/document/SKILL.md) · 文档同步 —— 按 diff 同步现有文档、按 Diataxis 补缺失文档，让文档跟上已发代码
 
 **元**
-- [`health`](./health/SKILL.md) · 配置体检 —— 审计 Claude Code / Codex / 项目指令的健康度与漂移
+- [`health`](./skills/health/SKILL.md) · 配置体检 —— 审计 Claude Code / Codex / 项目指令的健康度与漂移
 
 ## 其它安装方式
 
