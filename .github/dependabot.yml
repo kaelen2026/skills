@@ -1,0 +1,28 @@
+version: 2
+updates:
+  # GitHub Actions：保持 checkout / setup-node 等 pin 的版本不过期。
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    # commitlint 门禁会校验 PR 提交信息，默认的 "Bump ..." 不合规，必须给前缀。
+    commit-message:
+      prefix: ci
+    groups:
+      actions:
+        patterns: ["*"]
+
+  # npm：根工具链 + example/app，两处一并监控，按周开 PR。
+  - package-ecosystem: npm
+    directories:
+      - /
+      - /example/app
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: chore
+      prefix-development: chore
+      include: scope
+    groups:
+      npm:
+        patterns: ["*"]
