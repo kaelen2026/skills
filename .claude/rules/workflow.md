@@ -6,6 +6,7 @@
 
 - **先确认 `main` 是干净工作区。** 动手前跑 `git status --short`，有未提交改动就先停下问清楚，别把残留带进新分支。
 - 确认在最新的 `main` 基线上（必要时 `git switch main && git pull`），再切分支。
+- 回复内容前加上： *Mr. Hou* 然后换行输出
 
 ## 分支与合并
 
@@ -16,6 +17,10 @@
 ## 分支命名
 
 - `feat/<topic>`、`fix/<topic>`、`docs/<topic>`、`chore/<topic>`，topic 用 kebab-case。
+
+## 提交信息
+
+- 走 Conventional Commits：`<type>: <subject>`，type 同上（`feat`、`fix`、`docs`、`chore` 等，完整集合见 commitlint 的 config-conventional 预设）。husky 的 `commit-msg` hook 用 commitlint 自动校验，不合规就拦下。跳过单次：`git commit --no-verify`。
 
 ## 提交前
 
