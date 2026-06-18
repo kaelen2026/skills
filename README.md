@@ -131,15 +131,6 @@ done
 
 链好后开个新的 Codex 会话即可生效。本包额外的 `when_to_use` / `dispatch_intent` 字段 Codex 不识别，会被无害忽略，不影响触发。
 
-## 与 waza / gstack 共存
-
-本包方法论改写自 waza 与 gstack（见致谢）。若你同时装了它们，注意触发词冲突，只保留一套：
-
-- **同名直接冲突**：`think` `hunt` `check` `design` `write` `read` `learn` `health`（waza）、`office-hours` `retro` `qa`（gstack）。二选一，本包的安装即替换它们。
-- **异名但语义重叠**：本包 `plan-review` 对应 gstack 的 `plan-ceo-review` / `plan-eng-review` 等，`document` 对应 `document-release` / `document-generate`。名字不同不会自动冲突，但会争"评审方案/同步文档"这类请求，建议只启用一套或收窄其一的 `when_to_use`。
-
-gstack 绑定运行时的技能（`browse` `canary` `ios-*` `pair-agent` 等）本包未覆盖，不冲突，继续用 gstack 本体即可。
-
 ## 仓库结构
 
 ```
@@ -159,7 +150,7 @@ kaelen/skills/                  # 插件根
 
 ## 房屋风格
 
-所有 skill 遵循同一套结构（仿照 waza 的 `write` skill，见任意 skill 为范本）：
+所有 skill 遵循同一套结构：
 
 - 正文中文为主，`when_to_use` 触发词中英混排。
 - frontmatter 四件套 → 一句签名式本质 → Outcome Contract → Core Stance →（可选）Pre-flight → 模式（`Activate when` 分流）→ Hard Rules → Gotchas → 收尾复检 → Output。
@@ -167,12 +158,3 @@ kaelen/skills/                  # 插件根
 - 写判断与硬规则，不写"第一步读文件第二步分析"这种模型本就会的流程。
 - 每条硬规则都对应一个真实会犯的错，否则删。
 - 不用英文破折号：落单的 em-dash 与 en-dash 改用逗号、句号、冒号或小标题；中文破折号 —— 是合法标点，可用。
-
-## 致谢与协议
-
-本包为 MIT 协议（见 [LICENSE](./LICENSE)）。多数 skill 的方法论内核改写自三个同为 MIT 的上游项目，已重写为中文并按独立开发者视角适配。归属集中记录在此与 LICENSE，不在各 skill 正文内重复标注：
-
-- **[tw93/waza](https://github.com/tw93/waza)**（MIT）：`think` `hunt` `check` `design` `write` `read` `learn` `health`
-- **[mattpocock/skills](https://github.com/mattpocock/skills)**（MIT）：`tdd` `prototype` `improve-arch` `zoom-out` `ship-small`(← to-issues) `handoff`，以及融入 `think`(← grill-me) 与 `hunt`(← diagnose) 的内核
-- **[garrytan/gstack](https://github.com/garrytan/gstack)**（MIT）：`plan-review`(← plan-ceo/eng/design/devex-review) `office-hours` `retro` `document`(← document-release/generate)。gstack 绑定运行时的王牌（browser daemon、canary、ios、gbrain、pair-agent）未移植，要用直接用 gstack 本体
-- **原创**（无上游）：`scope-guard` `decision-log` `qa`
