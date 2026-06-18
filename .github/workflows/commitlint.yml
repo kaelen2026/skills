@@ -1,0 +1,21 @@
+name: commitlint
+
+on:
+  pull_request:
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          # 拉全量历史，且检出 PR 真实 head（默认是 merge ref），才能逐条校验本 PR 的提交。
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: 安装依赖
+        run: npm ci
+      - name: 校验本 PR 的提交信息
+        run: npx commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
