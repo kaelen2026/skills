@@ -9,6 +9,12 @@
 
 资深工程师和新手的差距，往往不在能不能把代码写出来，而在动手前后的判断力：知道什么不该做、改动会波及哪里、哪个发现真会出事、什么时候该停。独立开发者一个人身兼数职，最缺的恰恰是团队才有的那几样东西。这套包就是来补这个的。
 
+## 架构
+
+![kaelen/skills 架构图：宿主与触发、分发/发现、21 个技能分四类、单个 skill 的结构、提交前与合并门禁](./docs/architecture.png)
+
+宿主（Claude Code 走 `/plugin`、Codex 走目录软链）经分发/发现层找到 `skills/`，21 个技能分四类自动发现；每个技能即一份 `SKILL.md`，深度内容下沉 `references/` 按需加载；提交前由 husky 触发 `check.sh` + markdownlint + commitlint，合入 `main` 只走 PR。
+
 ## 安装
 
 ```bash
