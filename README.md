@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/github/v/release/kaelen2026/skills?label=release&color=d97757)](https://github.com/kaelen2026/skills/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)](https://github.com/kaelen2026/skills)
-[![Skills](https://img.shields.io/badge/skills-20-blue)](#全部技能20-个)
+[![Skills](https://img.shields.io/badge/skills-21-blue)](#全部技能21-个)
 
 一套**自包含**的 Claude Code 技能包，面向**独立开发者**，把资深工程师动手前后的判断力沉淀成会在对的时机自动触发的 skill。
 
@@ -46,7 +46,7 @@
 
 | 困境 | 团队里靠什么 | 这套包用哪些 skill 补 |
 |------|-------------|----------------------|
-| **没人评审** | 同事 review PR | `check` `tdd` `plan-review` |
+| **没人评审** | 同事 review PR / QA | `check` `qa` `tdd` `plan-review` |
 | **缺人讨论** | 拉人对线、白板 | `office-hours` `think` `plan-review` `prototype` `decision-log` |
 | **时间有限** | 分工、排期 | `scope-guard` `ship-small` `retro` |
 | **全栈全包** | 各角色分担 | `design` `write` `document` `hunt` `improve-arch` `zoom-out` `health` `read` `learn` `handoff` |
@@ -55,17 +55,18 @@
 
 ```
 该不该做        想清楚         评审计划       动手          找根因/重构      发布前         发布         复盘
-office-hours →  think    →    plan-review →  tdd/prototype → hunt/improve-arch → check  →  ship-small → retro
+office-hours →  think    →    plan-review →  tdd/prototype → hunt/improve-arch → qa/check → ship-small → retro
                 scope-guard                  design/write                                  document
                                                                                            decision-log / handoff 贯穿全程
 ```
 
-## 全部技能（20 个）
+## 全部技能（21 个）
 
 **工程闭环**
 - [`think`](./skills/think/SKILL.md) · 方案推演 —— 动手前一次一问地拷问、把方案与边界想清楚，产出决策完整的计划
 - [`plan-review`](./skills/plan-review/SKILL.md) · 计划评审 —— 写代码前对计划做对抗式多视角评审（战略/架构/设计/体验），打分并改到位
 - [`hunt`](./skills/hunt/SKILL.md) · 根因调试 —— 先建可信反馈回路，定位根因再修，拒绝"试一下看看"
+- [`qa`](./skills/qa/SKILL.md) · 运行时验收 —— 用 Playwright / 浏览器 / CLI / API / 产物检查证明实现真的能用
 - [`check`](./skills/check/SKILL.md) · 发布前评审 —— 对自己的 diff / PR / release 做对抗式自审与安全门禁
 - [`tdd`](./skills/tdd/SKILL.md) · 红绿重构 —— 给没人 review 的代码织一张随时能安全重构的网
 - [`prototype`](./skills/prototype/SKILL.md) · 一次性原型 —— 用完即弃的原型验证设计，答案进永久位置、代码进垃圾桶
@@ -124,10 +125,10 @@ done
 
 本包方法论改写自 waza 与 gstack（见致谢）。若你同时装了它们，注意触发词冲突，只保留一套：
 
-- **同名直接冲突**：`think` `hunt` `check` `design` `write` `read` `learn` `health`（waza）、`office-hours` `retro`（gstack）。二选一，本包的安装即替换它们。
+- **同名直接冲突**：`think` `hunt` `check` `design` `write` `read` `learn` `health`（waza）、`office-hours` `retro` `qa`（gstack）。二选一，本包的安装即替换它们。
 - **异名但语义重叠**：本包 `plan-review` 对应 gstack 的 `plan-ceo-review` / `plan-eng-review` 等，`document` 对应 `document-release` / `document-generate`。名字不同不会自动冲突，但会争"评审方案/同步文档"这类请求，建议只启用一套或收窄其一的 `when_to_use`。
 
-gstack 绑定运行时的技能（`browse` `qa` `canary` `ios-*` `pair-agent` 等）本包未覆盖，不冲突，继续用 gstack 本体即可。
+gstack 绑定运行时的技能（`browse` `canary` `ios-*` `pair-agent` 等）本包未覆盖，不冲突，继续用 gstack 本体即可。
 
 ## 仓库结构
 
@@ -136,7 +137,7 @@ kaelen/skills/                  # 插件根
 ├── .claude-plugin/
 │   ├── plugin.json             # 插件清单
 │   └── marketplace.json        # 单仓库即市场，支持 /plugin install
-├── skills/                     # 20 个 skill（插件自动发现）
+├── skills/                     # 21 个 skill（插件自动发现）
 │   ├── think/SKILL.md
 │   ├── hunt/{SKILL.md, references/}
 │   └── ...
@@ -163,5 +164,5 @@ kaelen/skills/                  # 插件根
 
 - **[tw93/waza](https://github.com/tw93/waza)**（MIT）：`think` `hunt` `check` `design` `write` `read` `learn` `health`
 - **[mattpocock/skills](https://github.com/mattpocock/skills)**（MIT）：`tdd` `prototype` `improve-arch` `zoom-out` `ship-small`(← to-issues) `handoff`，以及融入 `think`(← grill-me) 与 `hunt`(← diagnose) 的内核
-- **[garrytan/gstack](https://github.com/garrytan/gstack)**（MIT）：`plan-review`(← plan-ceo/eng/design/devex-review) `office-hours` `retro` `document`(← document-release/generate)。gstack 绑定运行时的王牌（browser daemon、qa、canary、ios、gbrain、pair-agent）未移植，要用直接用 gstack 本体
-- **原创**（无上游）：`scope-guard` `decision-log`
+- **[garrytan/gstack](https://github.com/garrytan/gstack)**（MIT）：`plan-review`(← plan-ceo/eng/design/devex-review) `office-hours` `retro` `document`(← document-release/generate)。gstack 绑定运行时的王牌（browser daemon、canary、ios、gbrain、pair-agent）未移植，要用直接用 gstack 本体
+- **原创**（无上游）：`scope-guard` `decision-log` `qa`
