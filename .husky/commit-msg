@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# 校验提交信息符合 Conventional Commits（配置见 commitlint.config.js）。
+# 跳过单次：git commit --no-verify
+npx --no-install commitlint --edit "$1"

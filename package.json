@@ -2,7 +2,8 @@
   "name": "kaelen-skills",
   "version": "1.1.0",
   "private": true,
-  "description": "零基建、纯 prompt 技能包的仓库工具链（markdown 校验与提交前格式化）。",
+  "type": "module",
+  "description": "零基建、纯 prompt 技能包的仓库工具链（markdown 校验、提交前格式化与提交信息校验）。",
   "scripts": {
     "prepare": "husky",
     "check": "bash bin/check.sh",
@@ -14,6 +15,8 @@
     "*.md": "markdownlint-cli2 --fix"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.0.2",
+    "@commitlint/config-conventional": "^21.0.2",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
     "markdownlint-cli2": "^0.22.1"
