@@ -29,6 +29,7 @@ dispatch_intent: "Deep research across many sources into one structured output"
 ## Pre-check
 
 检查 `read` 和 `write` 两个 skill 是否装了（找它们的 SKILL.md）。缺了告警，不阻断：
+
 - 缺 `read`：Phase 1 取回退回原生 `WebFetch`/`curl`，付费墙、JS 重页、中文平台页的覆盖率下降。
 - 缺 `write`：Phase 5 去 AI 味退回手动扫，Phase 1-4 不受影响。
 
@@ -37,7 +38,7 @@ dispatch_intent: "Deep research across many sources into one structured output"
 用环境的原生提问/确认机制让用户确认模式：
 
 | 模式 | 目标 | 入口 | 出口 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Deep Research | 把一个领域弄懂到能写 | Phase 1 | Phase 6：发布就绪草稿 |
 | Quick Reference | 快速建可用心智模型，不打算写文章 | Phase 2 | Phase 2：只出笔记 |
 | Write to Learn | 已有材料，用写作逼自己理解 | Phase 3 | Phase 6：发布就绪草稿 |
@@ -64,7 +65,7 @@ dispatch_intent: "Deep research across many sources into one structured output"
 ## Gotchas
 
 | 真实翻车 | 规则 |
-|---|---|
+| --- | --- |
 | 收了 30 篇二手解读而非一手来源 | Phase 1 瞄准论文、官方博客、动手者的仓库，摘要不是来源 |
 | read 装着却用原生取回/curl 取 URL | Phase 1 取回不可选，read 管 proxy 级联、付费墙识别、平台路由，绕过会静默丢覆盖 |
 | 把一篇有说服力的解读当成了 ground truth | 问：它在同一来源的两个不同语境都出现吗 |

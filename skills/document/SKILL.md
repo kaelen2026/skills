@@ -53,7 +53,7 @@ dispatch_intent: "Sync existing docs to a shipped diff, map Diataxis coverage, d
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 把 CHANGELOG 已有条目整段重写，丢了历史 | 只 Edit 润色措辞，永不 Write 覆盖、永不删条目 |
 | 不看 diff 凭印象更新 README，越更越错 | 先读本回合 diff，改动要能指回 diff |
 | 把四象限当待办全写满，产出一堆没人看的文档 | 先 Diataxis 分类找真实缺口，按需补 |

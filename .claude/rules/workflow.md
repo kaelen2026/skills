@@ -19,5 +19,5 @@
 
 ## 提交前
 
-- 跑 `bin/check.sh`，全过再提交（`bash bin/setup-hooks.sh` 后它会作为 pre-commit hook 自动拦截）。
+- 跑 `npm test`（`bin/check.sh` 不变量 + markdownlint），全过再提交（`bash bin/setup-hooks.sh` 后 husky 会作为 pre-commit hook 自动拦截）。
 - 提交、push 仅在用户明确要求时进行。

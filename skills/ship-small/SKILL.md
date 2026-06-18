@@ -44,7 +44,7 @@ dispatch_intent: "Fat branch or multi-part change to split into independently sh
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 按层切：一片全是 model，一片全是 UI，没一片能演示 | 竖切，每片穿透所有层 |
 | 切完每片能跑，但回滚第 2 片会带崩第 3 片 | 回滚边界独立，否则顺序或粒度错了 |
 | 把顺手的格式化、重命名混进功能片，diff 撑到没法看 | 无关改动先剔出单独成片 |

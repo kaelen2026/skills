@@ -71,7 +71,7 @@ dispatch_intent: "New feature, architecture, how should I design this, value jud
 ## 攻击角度（仅当方案涉及外部依赖、高并发、数据迁移时跑）
 
 | 角度 | 问题 |
-|---|---|
+| --- | --- |
 | 依赖失效 | 外部 API/服务/工具挂了，方案能优雅降级吗？ |
 | 规模爆炸 | 数据量或负载 10x，哪一步先崩？ |
 | 回滚成本 | 上线后方向错了，能退回什么状态，多难？ |
@@ -81,7 +81,7 @@ dispatch_intent: "New feature, architecture, how should I design this, value jud
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 把文件挪到 `~/project`，仓库其实在 `~/www/project` | 第一次文件操作前先 `pwd` |
 | 实现到第三步才开口要 API key | 交接前列全所有依赖 |
 | 用户说"就这么干"，结果在 think 里直接写了代码 | 视为批准推荐方案，声明选了哪个、收尾计划，不在 think 内实现 |
@@ -103,6 +103,7 @@ dispatch_intent: "New feature, architecture, how should I design this, value jud
 ## Output
 
 **批准的方案摘要：**
+
 - **Building**: 这是什么（一段）
 - **Not building**: 明确的范围外清单
 - **Approach**: 选定方案 + 理由

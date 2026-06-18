@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+# 提交前：先用 lint-staged 自动修复暂存的 markdown（markdownlint --fix），
+# 再跑仓库不变量门禁 bin/check.sh。任一不过就拦下提交。
+# 跳过单次：git commit --no-verify
+npx lint-staged
+npm run check

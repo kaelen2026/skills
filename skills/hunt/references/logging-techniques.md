@@ -21,6 +21,7 @@ Before adding a log, write the question it must answer:
 > "If this prints X before Y, hypothesis A holds. If it prints Y first, A is wrong."
 
 Discriminating log content:
+
 - Sequence number or timestamp (ordering)
 - Input identity key (which request/item)
 - Branch taken (which `if` arm)
@@ -57,6 +58,7 @@ Gate verbose logging behind a debug flag when the project already has one. Remov
 ## Timing Bug Logging
 
 For race conditions, flicker, or intermittent failures, log:
+
 - Event identity (which event source)
 - Timestamp (or monotonic counter)
 - Start and end (not just "it ran")
@@ -67,6 +69,7 @@ If adding a log changes the behavior, treat that as evidence of a timing, lifecy
 ## Removing Logs
 
 After the root cause is confirmed:
+
 1. Remove all temporary logs.
 2. If a log is genuinely useful in production, move it behind the project's debug flag or logger level.
 3. Do not leave `console.log`, `print`, or `fmt.Println` in shipped code paths unless the project keeps debug instrumentation there.

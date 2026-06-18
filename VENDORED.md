@@ -3,7 +3,7 @@
 本包大多数 skill 的 `SKILL.md` 正文和 `references/*.md` 已**重写**为中文、按独立开发者视角适配。但下面这些**支撑脚本和 inspector/reviewer agent** 是从上游近乎原样搬来的工具代码（MIT），只做了去除上游专有路径/措辞的最小清理：
 
 | 路径 | 来源 | 作用 |
-|---|---|---|
+| --- | --- | --- |
 | `skills/health/scripts/*` | tw93/waza | 配置/可维护性体检的采集与检查脚本（`collect-data.sh` 751 行等） |
 | `skills/health/agents/inspector-*.md` | tw93/waza | health 深审的 inspector 子 agent 提示词 |
 | `skills/check/scripts/*` | tw93/waza | 项目体检信号采集（`audit_signals.py`）与测试运行 |

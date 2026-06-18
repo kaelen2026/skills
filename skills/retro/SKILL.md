@@ -65,7 +65,7 @@ dispatch_intent: "Reconstruct what shipped from git history, track cadence and t
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | streak 只数了窗口内，长 streak 被截断 | streak 用全历史 commit 日期，与窗口参数解耦 |
 | `git log --since=日期` 在傍晚跑，起点变成当时钟点而非当天零点 | day/week 窗口算绝对起始日期，加 `T00:00:00` 后缀对齐午夜 |
 | 纯本地仓 `git fetch` 失败导致流程中断 | 先判断有无 remote，无 remote 用本地分支，fetch 失败不致命 |

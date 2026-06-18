@@ -14,6 +14,7 @@ The base /check skill runs as always-on. Specialist reviewers are additive.
 **Activate at:** Standard or Deep depth
 
 Activate when the diff touches:
+
 - Authentication or authorization logic (middleware, guards, JWT handling, session management)
 - Cryptographic operations (hashing, signing, encryption)
 - Input handling at trust boundaries (form fields, API request bodies, URL parameters)
@@ -30,6 +31,7 @@ Activate when the diff touches:
 **Activate at:** Standard or Deep depth
 
 Activate when the diff:
+
 - Adds a new module, package, or service boundary
 - Changes a public API, exported type, or function signature
 - Introduces a cross-module import that did not exist before
@@ -48,6 +50,7 @@ No separate agent. The orchestrator runs this as an extra reasoning pass after a
 Adversarial pass asks: "If I wanted to break this system through this specific diff, what would I do?"
 
 Four attack angles:
+
 1. **Assumption violation** -- What does this code assume is always true? (format, ordering, range) What happens when it is not?
 2. **Composition failures** -- What breaks when this new code interacts with the existing system under concurrent load or partial failure?
 3. **Cascade construction** -- What sequence of valid operations leads to an invalid state?

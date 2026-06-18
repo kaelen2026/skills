@@ -48,7 +48,7 @@ dispatch_intent: "Find architectural friction, propose deepening refactors in do
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 用 "service"/"component" 泛泛点评 | 取项目领域词汇描述每个候选 |
 | 还没选候选就开始设计接口 | 先对齐问题、排序、请用户挑，再设计 |
 | 判某模块浅就拆了，复杂度摊给调用方更糟 | 先跑 deletion test：复杂度消失才是真浅 |

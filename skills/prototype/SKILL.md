@@ -48,7 +48,7 @@ dispatch_intent: "Throwaway code to answer one design question, validate logic o
 ## Gotchas
 
 | 出过的问题 | 规则 |
-|---|---|
+| --- | --- |
 | 原型没标临时，混进了正式代码库 | 文件名/注释/目录显眼标 PROTOTYPE，放被验代码旁 |
 | 给原型加了测试和抽象，半天没出答案 | 速度优先，跳过测试/抽象/错误处理 |
 | 接了真数据库，留下脏数据 | 状态留内存，除非验的就是 DB |

@@ -64,7 +64,7 @@ dispatch_intent: "Runtime QA and acceptance verification after implementation: c
 ## Gotchas
 
 | 真实会犯的错 | 规则 |
-|---|---|
+| --- | --- |
 | 单元测试绿了就说页面能用 | UI 要真实打开，至少走关键路径 |
 | Playwright 红了马上改业务代码 | 先判 product / test / environment / unknown |
 | 只测 1440px 桌面 | 相关 UI 至少加一个 375px 左右窄视口 |
