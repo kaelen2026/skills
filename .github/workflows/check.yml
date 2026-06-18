@@ -12,3 +12,9 @@ jobs:
       - uses: actions/checkout@v6
       - name: 运行不变量门禁
         run: bash bin/check.sh
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: 运行 example app 测试
+        working-directory: example/app
+        run: npm test
