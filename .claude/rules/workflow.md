@@ -12,6 +12,7 @@
 
 - **禁止在 `main` 上 Write/Edit。** 接到任何改动需求，第一步就 `git switch -c <branch>`，再开始动代码。不是改完才切分支。
 - **合入 `main` 只走 PR。** push 特性分支后用 `gh pr create`，由人在 PR 上合。不做本地 `git merge` / `--ff-only` 直接并回 main，那样绕过了评审与 CI 门禁。
+- **合并用 merge commit，不 squash。** 明确要合时用 `gh pr merge --merge`，保留分支真实提交历史；不用 `--squash` / `--rebase` 压成一条。
 - **一个 PR 一件事。** 互不相关的改动（例如新增示例 vs 维护规则）各开各的分支与 PR，别混在一条分支里。
 
 ## 分支命名
