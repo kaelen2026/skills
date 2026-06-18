@@ -5,6 +5,12 @@ on:
     branches: [main]
   pull_request:
 
+# 同一分支/PR 连续 push 时取消尚在跑的旧 run，省 CI 时间。
+# main 上不取消（按 ref 隔离即可），避免漏掉已合入的提交。
+concurrency:
+  group: check-${{ github.ref }}
+  cancel-in-progress: ${{ github.ref != 'refs/heads/main' }}
+
 jobs:
   check:
     runs-on: ubuntu-latest
