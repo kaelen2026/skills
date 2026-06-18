@@ -92,9 +92,33 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
 
 ## 其它安装方式
 
+### Claude Code
+
 本仓库即一个 Claude Code 插件（含 `.claude-plugin/` 清单），安装见顶部。也支持本地路径添加 marketplace：`/plugin marketplace add <本地仓库路径>`。
 
 不想用插件机制，可把单个 skill 软链到个人目录：`ln -s "$(pwd)/skills/hunt" ~/.claude/skills/hunt`。
+
+### OpenAI Codex
+
+这些 skill 是纯 `SKILL.md`（带 `name` + `description` frontmatter），Codex 能直接读，无需任何转换。Codex 没有插件市场，靠目录发现 skill：仓库级 `.agents/skills/`（从当前目录向上找到仓库根），用户级 `~/.agents/skills/`（跨项目）。它用 `description` 做隐式匹配，也可在会话里 `/skills` 或 `$<skill>` 显式调用。
+
+软链单个 skill 到用户目录：
+
+```bash
+mkdir -p ~/.agents/skills
+ln -s "$(pwd)/skills/hunt" ~/.agents/skills/hunt
+```
+
+一次性把全部 skill 都链过去：
+
+```bash
+mkdir -p ~/.agents/skills
+for d in "$(pwd)"/skills/*/; do
+  ln -sfn "$d" ~/.agents/skills/"$(basename "$d")"
+done
+```
+
+链好后开个新的 Codex 会话即可生效。本包额外的 `when_to_use` / `dispatch_intent` 字段 Codex 不识别，会被无害忽略，不影响触发。
 
 ## 与 waza / gstack 共存
 
