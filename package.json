@@ -1,6 +1,6 @@
 {
   "name": "kaelen-skills",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "type": "module",
   "description": "零基建、纯 prompt 技能包的仓库工具链（markdown 校验、提交前格式化与提交信息校验）。",
