@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/github/v/release/kaelen2026/skills?label=release&color=d97757)](https://github.com/kaelen2026/skills/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)](https://github.com/kaelen2026/skills)
-[![Skills](https://img.shields.io/badge/skills-21-blue)](#全部技能21-个)
+[![Skills](https://img.shields.io/badge/skills-22-blue)](#全部技能22-个)
 
 一套**自包含**的 Claude Code 技能包，面向**独立开发者**，把资深工程师动手前后的判断力沉淀成会在对的时机自动触发的 skill。
 
@@ -11,9 +11,9 @@
 
 ## 架构
 
-![kaelen/skills 架构图：宿主与触发、分发/发现、21 个技能分四类、单个 skill 的结构、提交前与合并门禁](./docs/architecture.png)
+![kaelen/skills 架构图：宿主与触发、分发/发现、22 个技能分四类、单个 skill 的结构、提交前与合并门禁](./docs/architecture.png)
 
-宿主（Claude Code 走 `/plugin`、Codex 走目录软链）经分发/发现层找到 `skills/`，21 个技能分四类自动发现；每个技能即一份 `SKILL.md`，深度内容下沉 `references/` 按需加载；提交前由 husky 触发 `check.sh` + markdownlint + commitlint，合入 `main` 只走 PR。
+宿主（Claude Code 走 `/plugin`、Codex 走目录软链）经分发/发现层找到 `skills/`，22 个技能分四类自动发现；每个技能即一份 `SKILL.md`，深度内容下沉 `references/` 按需加载；提交前由 husky 触发 `check.sh` + markdownlint + commitlint，合入 `main` 只走 PR。
 
 ## 安装
 
@@ -55,7 +55,7 @@
 | **没人评审** | 同事 review PR / QA | `check` `qa` `tdd` `plan-review` |
 | **缺人讨论** | 拉人对线、白板 | `office-hours` `think` `plan-review` `prototype` `decision-log` |
 | **时间有限** | 分工、排期 | `scope-guard` `ship-small` `retro` |
-| **全栈全包** | 各角色分担 | `design` `write` `document` `hunt` `improve-arch` `zoom-out` `health` `read` `learn` `handoff` |
+| **全栈全包** | 各角色分担 | `design` `write` `document` `seo` `hunt` `improve-arch` `zoom-out` `health` `read` `learn` `handoff` |
 
 ## 一条工作流串起全部技能
 
@@ -66,7 +66,7 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
                                                                                            decision-log / handoff 贯穿全程
 ```
 
-## 全部技能（21 个）
+## 全部技能（22 个）
 
 **工程闭环**
 
@@ -96,6 +96,7 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
 - [`read`](./skills/read/SKILL.md) · 读取链接 —— URL / PDF 取摘要或转 markdown
 - [`learn`](./skills/learn/SKILL.md) · 深入研究 —— 多阶段研究工作流，把一批材料消化成一篇
 - [`document`](./skills/document/SKILL.md) · 文档同步 —— 按 diff 同步现有文档、按 Diataxis 补缺失文档，让文档跟上已发代码
+- [`seo`](./skills/seo/SKILL.md) · 搜索优化 —— 先确认能抓取能索引，再把标题描述内容对齐搜索意图，让该找到你的人搜得到（只走白帽）
 
 **元**
 
@@ -138,7 +139,7 @@ kaelen/skills/                  # 插件根
 ├── .claude-plugin/
 │   ├── plugin.json             # 插件清单
 │   └── marketplace.json        # 单仓库即市场，支持 /plugin install
-├── skills/                     # 21 个 skill（插件自动发现）
+├── skills/                     # 22 个 skill（插件自动发现）
 │   ├── think/SKILL.md
 │   ├── hunt/{SKILL.md, references/}
 │   └── ...
