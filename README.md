@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/github/v/release/kaelen2026/skills?label=release&color=d97757)](https://github.com/kaelen2026/skills/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)](https://github.com/kaelen2026/skills)
-[![Skills](https://img.shields.io/badge/skills-24-blue)](#全部技能24-个)
+[![Skills](https://img.shields.io/badge/skills-26-blue)](#全部技能26-个)
 
 一套**自包含**的 Claude Code 技能包，面向**独立开发者**，把资深工程师动手前后的判断力沉淀成会在对的时机自动触发的 skill。
 
@@ -11,9 +11,9 @@
 
 ## 架构
 
-![kaelen/skills 架构图：宿主与触发、分发/发现、24 个技能分四类、单个 skill 的结构、提交前与合并门禁](./docs/architecture.png)
+![kaelen/skills 架构图：宿主与触发、分发/发现、26 个技能分四类、单个 skill 的结构、提交前与合并门禁](./docs/architecture.png)
 
-宿主（Claude Code 走 `/plugin`、Codex 走目录软链）经分发/发现层找到 `skills/`，24 个技能分四类自动发现；每个技能即一份 `SKILL.md`，深度内容下沉 `references/` 按需加载；提交前由 husky 触发 `check.sh` + markdownlint + commitlint，合入 `main` 只走 PR。
+宿主（Claude Code 走 `/plugin`、Codex 走目录软链）经分发/发现层找到 `skills/`，26 个技能分四类自动发现；每个技能即一份 `SKILL.md`，深度内容下沉 `references/` 按需加载；提交前由 husky 触发 `check.sh` + markdownlint + commitlint，合入 `main` 只走 PR。
 
 ## 安装
 
@@ -56,7 +56,7 @@
 | **缺人讨论** | 拉人对线、白板 | `office-hours` `think` `plan-review` `prototype` `decision-log` |
 | **时间有限** | 分工、排期 | `scope-guard` `ship-small` `retro` |
 | **没人来 / 不赚钱** | 增长 / 市场 | `distribution` `get-paid` |
-| **全栈全包** | 各角色分担 | `design` `write` `document` `seo` `hunt` `improve-arch` `zoom-out` `health` `read` `learn` `handoff` |
+| **全栈全包** | 各角色分担 | `design` `write` `document` `seo` `hunt` `improve-arch` `zoom-out` `migrate` `observe` `health` `read` `learn` `handoff` |
 
 ## 一条工作流串起全部技能
 
@@ -67,7 +67,7 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
                                                                                            decision-log / handoff 贯穿全程
 ```
 
-## 全部技能（24 个）
+## 全部技能（26 个）
 
 **工程闭环**
 
@@ -80,6 +80,8 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
 - [`prototype`](./skills/prototype/SKILL.md) · 一次性原型 —— 用完即弃的原型验证设计，答案进永久位置、代码进垃圾桶
 - [`improve-arch`](./skills/improve-arch/SKILL.md) · 架构重构 —— 用领域语言找深化机会、降低耦合，扮演缺席的架构同伴
 - [`zoom-out`](./skills/zoom-out/SKILL.md) · 画地图 —— 上升一层抽象，给陌生（或自己半年前写的）代码画模块与调用方地图
+- [`migrate`](./skills/migrate/SKILL.md) · 数据迁移 —— 把 schema/数据变更按 expand-contract 安全落地：向后兼容、先在副本演练、有验证过的还原路径
+- [`observe`](./skills/observe/SKILL.md) · 可观测 —— 上线后别裸奔，从用户可感知的失败倒推，埋外部探活、错误聚合、能串请求的日志，告警可执行不扰民
 
 **产品与节奏**
 
@@ -142,7 +144,7 @@ kaelen/skills/                  # 插件根
 ├── .claude-plugin/
 │   ├── plugin.json             # 插件清单
 │   └── marketplace.json        # 单仓库即市场，支持 /plugin install
-├── skills/                     # 24 个 skill（插件自动发现）
+├── skills/                     # 26 个 skill（插件自动发现）
 │   ├── think/SKILL.md
 │   ├── hunt/{SKILL.md, references/}
 │   └── ...
