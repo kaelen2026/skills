@@ -3,7 +3,7 @@
   "diagram_type": "architecture",
   "meta": {
     "title": "kaelen/skills 架构",
-    "subtitle": "宿主与触发 · 分发发现 · 24 个技能分四类 · 单 skill 结构 · 提交与合并门禁",
+    "subtitle": "宿主与触发 · 分发发现 · 26 个技能分四类 · 单 skill 结构 · 提交与合并门禁",
     "output": "architecture.html"
   },
   "components": [
@@ -14,9 +14,9 @@
     { "id": "mp",     "type": "cloud", "label": "marketplace.json", "sublabel": "单仓即市场", "pos": [260, 110], "size": [160, 58] },
     { "id": "pj",     "type": "cloud", "label": "plugin.json", "sublabel": "插件清单", "pos": [260, 222], "size": [160, 58] },
 
-    { "id": "skills", "type": "backend", "label": "skills/", "sublabel": "24 个 · 自动发现", "pos": [490, 165], "size": [130, 72], "tag": "插件根" },
+    { "id": "skills", "type": "backend", "label": "skills/", "sublabel": "26 个 · 自动发现", "pos": [490, 165], "size": [130, 72], "tag": "插件根" },
 
-    { "id": "eng",    "type": "backend", "label": "工程闭环 · 9", "sublabel": "think check hunt qa tdd…", "pos": [690, 50], "size": [195, 56] },
+    { "id": "eng",    "type": "backend", "label": "工程闭环 · 11", "sublabel": "think check hunt migrate observe…", "pos": [690, 50], "size": [195, 56] },
     { "id": "prod",   "type": "backend", "label": "产品与节奏 · 8", "sublabel": "office-hours distribution get-paid…", "pos": [690, 126], "size": [195, 56] },
     { "id": "content","type": "backend", "label": "内容与研究 · 6", "sublabel": "design write seo learn…", "pos": [690, 202], "size": [195, 56] },
     { "id": "meta",   "type": "backend", "label": "元 · 1", "sublabel": "health 配置体检", "pos": [690, 278], "size": [195, 56] },
@@ -32,7 +32,7 @@
   ],
   "boundaries": [
     { "kind": "region", "label": "分发 / 发现", "wraps": ["mp", "pj"] },
-    { "kind": "region", "label": "skills/ · 24 个（插件自动发现）", "wraps": ["eng", "prod", "content", "meta"] },
+    { "kind": "region", "label": "skills/ · 26 个（插件自动发现）", "wraps": ["eng", "prod", "content", "meta"] },
     { "kind": "region", "label": "单个 skill 的结构", "wraps": ["skillmd", "refs", "scripts"] },
     { "kind": "region", "label": "提交前 + 合并门禁（husky + CI）", "wraps": ["husky", "check", "mdlint", "ci"] }
   ],
