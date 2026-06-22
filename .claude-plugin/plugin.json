@@ -2,8 +2,8 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "kaelen-skills",
   "displayName": "kaelen/skills",
-  "version": "1.2.0",
-  "description": "独立开发者的资深工程师技能包：22 个零基建纯 prompt 技能，覆盖该不该做、想清楚、评审计划、调试、QA、发布、复盘的完整工作流。",
+  "version": "1.3.0",
+  "description": "独立开发者的资深工程师技能包：24 个零基建纯 prompt 技能，覆盖该不该做、想清楚、评审计划、调试、QA、获客变现、发布、复盘的完整工作流。",
   "author": {
     "name": "kaelen",
     "email": "kaelen.hou@gmail.com"
