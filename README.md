@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/github/v/release/kaelen2026/skills?label=release&color=d97757)](https://github.com/kaelen2026/skills/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](./LICENSE)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-plugin-d97757)](https://github.com/kaelen2026/skills)
-[![Skills](https://img.shields.io/badge/skills-22-blue)](#全部技能22-个)
+[![Skills](https://img.shields.io/badge/skills-24-blue)](#全部技能24-个)
 
 一套**自包含**的 Claude Code 技能包，面向**独立开发者**，把资深工程师动手前后的判断力沉淀成会在对的时机自动触发的 skill。
 
@@ -11,9 +11,9 @@
 
 ## 架构
 
-![kaelen/skills 架构图：宿主与触发、分发/发现、22 个技能分四类、单个 skill 的结构、提交前与合并门禁](./docs/architecture.png)
+![kaelen/skills 架构图：宿主与触发、分发/发现、24 个技能分四类、单个 skill 的结构、提交前与合并门禁](./docs/architecture.png)
 
-宿主（Claude Code 走 `/plugin`、Codex 走目录软链）经分发/发现层找到 `skills/`，22 个技能分四类自动发现；每个技能即一份 `SKILL.md`，深度内容下沉 `references/` 按需加载；提交前由 husky 触发 `check.sh` + markdownlint + commitlint，合入 `main` 只走 PR。
+宿主（Claude Code 走 `/plugin`、Codex 走目录软链）经分发/发现层找到 `skills/`，24 个技能分四类自动发现；每个技能即一份 `SKILL.md`，深度内容下沉 `references/` 按需加载；提交前由 husky 触发 `check.sh` + markdownlint + commitlint，合入 `main` 只走 PR。
 
 ## 安装
 
@@ -55,6 +55,7 @@
 | **没人评审** | 同事 review PR / QA | `check` `qa` `tdd` `plan-review` |
 | **缺人讨论** | 拉人对线、白板 | `office-hours` `think` `plan-review` `prototype` `decision-log` |
 | **时间有限** | 分工、排期 | `scope-guard` `ship-small` `retro` |
+| **没人来 / 不赚钱** | 增长 / 市场 | `distribution` `get-paid` |
 | **全栈全包** | 各角色分担 | `design` `write` `document` `seo` `hunt` `improve-arch` `zoom-out` `health` `read` `learn` `handoff` |
 
 ## 一条工作流串起全部技能
@@ -66,7 +67,7 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
                                                                                            decision-log / handoff 贯穿全程
 ```
 
-## 全部技能（22 个）
+## 全部技能（24 个）
 
 **工程闭环**
 
@@ -84,6 +85,8 @@ office-hours →  think    →    plan-review →  tdd/prototype → hunt/improv
 
 - [`office-hours`](./skills/office-hours/SKILL.md) · 该不该做 —— 六个逼问验证一个想法值不值得做、做给谁、最窄切入点
 - [`scope-guard`](./skills/scope-guard/SKILL.md) · 范围控制 —— 决定这次**不做**什么，砍掉镀金，切出 MVP 边界
+- [`distribution`](./skills/distribution/SKILL.md) · 获客诊断 —— 上线后没人来：认清分发是产品决策，押定唯一一个能复利的渠道
+- [`get-paid`](./skills/get-paid/SKILL.md) · 变现诊断 —— 有人用不付钱：定位漏在定价/价值/留存哪一层，逼出一个可证伪实验
 - [`ship-small`](./skills/ship-small/SKILL.md) · 小步发布 —— 把一坨改动拆成各自能验、能上、能回滚的垂直切片
 - [`decision-log`](./skills/decision-log/SKILL.md) · 决策留痕 —— 超轻量 ADR，把"为什么这么选"留给半年后的自己
 - [`handoff`](./skills/handoff/SKILL.md) · 会话交接 —— 压缩上下文，交给下一段会话或明天的你继续
@@ -139,7 +142,7 @@ kaelen/skills/                  # 插件根
 ├── .claude-plugin/
 │   ├── plugin.json             # 插件清单
 │   └── marketplace.json        # 单仓库即市场，支持 /plugin install
-├── skills/                     # 22 个 skill（插件自动发现）
+├── skills/                     # 24 个 skill（插件自动发现）
 │   ├── think/SKILL.md
 │   ├── hunt/{SKILL.md, references/}
 │   └── ...
