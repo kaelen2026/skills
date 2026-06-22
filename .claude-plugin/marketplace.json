@@ -7,13 +7,13 @@
   },
   "metadata": {
     "description": "独立开发者的资深工程师技能集",
-    "version": "1.2.0"
+    "version": "1.3.0"
   },
   "plugins": [
     {
       "name": "kaelen-skills",
       "source": "./",
-      "description": "面向独立开发者的 22 个技能，串起 该不该做 → 想清楚 → 评审计划 → 调试 → QA → 发布 → 复盘 的完整流程，按中英关键词自动触发。零基建、纯 prompt，替单人开发补上没人评审、没人讨论的那几环。",
+      "description": "面向独立开发者的 24 个技能，串起 该不该做 → 想清楚 → 评审计划 → 调试 → QA → 获客变现 → 发布 → 复盘 的完整流程，按中英关键词自动触发。零基建、纯 prompt，替单人开发补上没人评审、没人讨论的那几环。",
       "category": "productivity",
       "tags": ["indie-dev", "code-review", "debugging", "planning", "ship", "chinese"]
     }
