@@ -1,7 +1,7 @@
 ---
 name: office-hours
-description: "Product-level interrogation of an idea before any plan exists: should this be built at all, for whom, and what's the narrowest wedge worth shipping. Pushes on demand reality and the status quo until the answer is specific and uncomfortable, then saves a short design doc. Use when an indie dev floats a raw idea and asks 这个想法值不值得做/有人要吗/该不该做/帮我想清楚/逼问我这个点子/is this worth building/should I build this/who is this for/poke holes in my idea. Not for how to build something already decided (use think) or trimming a settled scope (use scope-guard)."
-when_to_use: "这个想法值不值得做, 有人要吗, 真有人要吗, 该不该做, 要不要做这个, 我有个想法, 这个点子怎么样, 帮我想清楚, 逼问我这个点子, 证伪一下, 验证一下需求, 最小切入点, 该做给谁, office hours, is this worth building, should I build this, who is this for, validate this idea, poke holes in my idea, brainstorm this idea, I have an idea"
+description: "Product-level interrogation of an idea before any plan exists: should this be built at all, for whom, and what's the narrowest wedge worth shipping. Pushes on demand reality and the status quo until the answer is specific and uncomfortable, then saves a short design doc. Use when an indie dev floats a raw idea and asks 这个想法值不值得做/有人要吗/该不该做/帮我想清楚/逼问我这个点子/成功指标/怎么算成功/最小可跑闭环/is this worth building/should I build this/who is this for/poke holes in my idea. Not for how to build something already decided (use think) or trimming a settled scope (use scope-guard)."
+when_to_use: "这个想法值不值得做, 有人要吗, 真有人要吗, 该不该做, 要不要做这个, 我有个想法, 这个点子怎么样, 帮我想清楚, 逼问我这个点子, 证伪一下, 验证一下需求, 最小切入点, 该做给谁, office hours, is this worth building, should I build this, who is this for, validate this idea, poke holes in my idea, brainstorm this idea, I have an idea, 成功指标, 怎么算成功, 最小闭环, 最小可跑闭环, success metric, smallest runnable loop"
 dispatch_intent: "A raw idea with no plan yet: decide whether it should exist at all, who the real user is, whether demand is real or imagined, and the narrowest version worth shipping"
 ---
 
@@ -35,23 +35,24 @@ dispatch_intent: "A raw idea with no plan yet: decide whether it should exist at
 ## 模式
 
 **Startup（创业）模式 · Activate when**: 用户在做或在想一个创业 / 要赚钱 / 公司内部要尽快出成果的东西。
-跑下面的六个逼问题，直接到让人不舒服。诊断不是鼓励。对每个答案表态，并说清什么证据会让你改主意。
+跑下面的七个逼问题，直接到让人不舒服。诊断不是鼓励。对每个答案表态，并说清什么证据会让你改主意。
 
 **Builder（玩家）模式 · Activate when**: 用户在为好玩、学习、开源、黑客松、研究而做。
 当一个有主见、会兴奋的协作者。帮他找到这个想法最酷的版本：最酷的版本长什么样、给谁看会让人"哇"、最快能跑/能分享的路径是什么、最接近的现有东西是什么且你的有何不同。结尾给具体的"接下来做什么"，不是商业验证任务。
 
 中途氛围变了就切。玩家模式里用户开始说"其实这可能能做成公司"或提到客户、收入，就自然升级到 Startup 模式："好，那我问你几个更狠的问题。"
 
-## 六个逼问题（Startup 模式，一次一个，逐个推到具体；细节在 references）
+## 七个逼问题（Startup 模式，一次一个，逐个推到具体；细节在 references）
 
 按产品阶段智能路由，不必每次全问。问题全文、追问到什么程度、红旗信号见 `references/forcing-questions.md`。
 
 1. **需求真实性**：最强的证据是什么——不是"有兴趣"、不是注册了等待名单，而是有人会因为它明天消失而真的难受？
 2. **现状**：用户现在用什么解决这个问题，哪怕很烂？那套土办法花了他们多少时间/钱？
 3. **渴望级具体**：说出最需要它的那个真人。什么职位？什么让他升职、什么让他被开、什么让他半夜睡不着？
-4. **最窄楔子**：有人这周就肯掏真钱的最小版本是什么——不是建完平台之后，是这周？
+4. **最窄楔子 / 最小可跑闭环**：有人这周就肯掏真钱的最小版本是什么——不是建完平台之后，是这周？再追一层：验证核心机制成不成立的最小端到端回路（输入→处理→看到结果）是什么，能证伪最大风险？只定义"验证什么、什么结果算通过"，不出实现方案（怎么搭交 prototype / think）。
 5. **观察与意外**：你真坐下来看过有人用它而不出手帮忙吗？他做了什么让你意外的事？
 6. **未来契合**：如果三年后世界明显不同（它一定会），你的产品是变得更必需还是更不必需？
+7. **成功指标**：这东西上线后你怎么知道它成了？给一个**可观测**信号——一个数字、一个行为、一个"挂了会有人慌"的止血点，而不是"用户变多""大家更满意""融到资"这种虚荣或滞后指标。定不出可观测信号，通常说明价值主张还没想清。
 
 一次一个，问完停下等回答再问下一个。用户的答案已覆盖后面的题就跳过。用户喊"别问了直接做"，说明这些硬问题正是价值所在，再问两个最关键的然后进前提挑战；第二次推回就尊重他直接进前提挑战。
 
@@ -73,6 +74,8 @@ dispatch_intent: "A raw idea with no plan yet: decide whether it should exist at
 - **现状是"什么都没做"是红旗，不是机会。** 真没人在做任何事，通常说明问题不够痛，不是市场空白。
 - **类别级答案不算回答。** "中小企业""营销团队"是过滤器不是人，你没法给一个类别发邮件。逼到一个名字。
 - **能 grep 到的现状别问用户。** 想法是不是已部分存在，自己查。
+- **成功指标要可观测。** "用户变多""大家更满意""融到资"不是成功指标——判定不了这次赌注成没成。逼到一个能明确判成/败的信号：数字、行为、或"挂了会有人慌"的止血点。定不出来就是价值还没想清。
+- **最小可跑闭环只定义要验证什么，不出实现方案。** 那个最小回路是为了证伪核心机制、杀掉最大风险，产出是"跑什么实验、什么结果算通过"，不是怎么搭——怎么搭交 prototype / think，越界又把"该不该做"和"怎么做"搅在一起了。
 
 ## Gotchas
 
@@ -85,6 +88,8 @@ dispatch_intent: "A raw idea with no plan yet: decide whether it should exist at
 | 用户喊别问了，就一题没问直接放行 | 再问两个最关键的，第二次推回才尊重 |
 | 在线搜索时带出了具体 stealth 点子 | 只用泛化品类词，要求保密就跳过 |
 | 把"其实已经能用"的功能当成新缺口验证 | 先 grep 确认现状 |
+| 把"用户变多/拿到融资"当成功指标 | 成功指标要可观测：数字 / 行为 / 止血点，能判成败 |
+| 把"最小可跑闭环"答成一份实现方案 | 只定义验证什么、什么结果算通过；怎么搭交 prototype / think |
 
 ## Output
 
@@ -100,10 +105,12 @@ dispatch_intent: "A raw idea with no plan yet: decide whether it should exist at
 - **目标用户**：具体到名字/角色
 - **需求证据**：行为 / 付费 / 慌乱级别的证据
 - **最窄楔子**：这周能上的最小版本
+- **最小可跑闭环**：验证核心机制的最小端到端回路（要验证什么、什么结果算通过）
+- **成功指标**：一个可观测的成 / 败信号（数字 / 行为 / 止血点）
 - **保留的前提**：被挑战后用户确认的前提
 
 收尾这句：
 
 ```
-想法已逼问完。判断是 [Kill/Narrow/Build]。要把它变成可执行方案，跑 /think；要先把一坨想做的需求画出范围线，跑 /scope-guard。
+想法已逼问完。判断是 [Kill/Narrow/Build]。要把它变成可执行方案，跑 /think；要先把一坨想做的需求画出范围线，跑 /scope-guard；要用最小可跑闭环先验证核心机制，跑 /prototype。
 ```
